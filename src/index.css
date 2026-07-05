@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.4rem;
+    --background: 0.98 0.002 220;
+    --foreground: 0.15 0.01 220;
+    --card: 0.95 0.003 220;
+    --card-foreground: 0.15 0.01 220;
+    --popover: 0.95 0.003 220;
+    --popover-foreground: 0.15 0.01 220;
+    --primary: 0.62 0.2 38;
+    --primary-foreground: 0.99 0 0;
+    --secondary: 0.93 0.01 252;
+    --secondary-foreground: 0.15 0.01 220;
+    --muted: 0.92 0.005 220;
+    --muted-foreground: 0.45 0.01 220;
+    --accent: 0.62 0.2 38;
+    --accent-foreground: 0.99 0 0;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.99 0 0;
+    --border: 0.85 0.006 220;
+    --input: 0.96 0.002 220;
+    --ring: 0.62 0.2 38;
+    --chart-1: 0.62 0.2 38;
+    --chart-2: 0.7 0.15 162;
+    --chart-3: 0.76 0.19 70;
+    --chart-4: 0.63 0.26 303;
+    --chart-5: 0.64 0.25 16;
+    --sidebar: 0.96 0.003 220;
+    --sidebar-foreground: 0.15 0.01 220;
+    --sidebar-primary: 0.62 0.2 38;
+    --sidebar-primary-foreground: 0.99 0 0;
+    --sidebar-accent: 0.92 0.005 220;
+    --sidebar-accent-foreground: 0.15 0.01 220;
+    --sidebar-border: 0.85 0.006 220;
+    --sidebar-ring: 0.62 0.2 38;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    color-scheme: light;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  :focus-visible {
+    outline: 2px solid oklch(var(--ring));
+    outline-offset: 2px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    background: transparent;
+    color: oklch(var(--foreground));
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: oklch(var(--muted-foreground));
+  }
+}
